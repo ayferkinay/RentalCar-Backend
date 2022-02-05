@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "ff66793d-1485-4fd9-b056-a4f5c03c5523": {
+      "ProjectGuid": "ff66793d-1485-4fd9-b056-a4f5c03c5523",
+      "DisplayName": "ConsoleUI",
+      "ColorIndex": 0
+    },
+    "c994aa52-87ac-44d1-9737-a6606dfa2770": {
+      "ProjectGuid": "c994aa52-87ac-44d1-9737-a6606dfa2770",
+      "DisplayName": "Business",
+      "ColorIndex": 1
+    },
+    "a5471ef7-6438-4b6f-9795-d1458cc41c1b": {
+      "ProjectGuid": "a5471ef7-6438-4b6f-9795-d1458cc41c1b",
+      "DisplayName": "DataAccess",
+      "ColorIndex": 2
+    },
+    "41ad242d-dd7c-44d8-a38c-9f080c43cf51": {
+      "ProjectGuid": "41ad242d-dd7c-44d8-a38c-9f080c43cf51",
+      "DisplayName": "Entities",
+      "ColorIndex": 3
+    },
+    "d86a9f05-dbde-43e9-820d-96399eadd70c": {
+      "ProjectGuid": "d86a9f05-dbde-43e9-820d-96399eadd70c",
+      "DisplayName": "Business",
+      "ColorIndex": 4
+    },
+    "b2aa6da7-88e0-4e9b-9670-08e52cecd4c1": {
+      "ProjectGuid": "b2aa6da7-88e0-4e9b-9670-08e52cecd4c1",
+      "DisplayName": "DataAccess",
+      "ColorIndex": 5
+    },
+    "e26891fd-0683-41ad-91a7-eefbd1b90b50": {
+      "ProjectGuid": "e26891fd-0683-41ad-91a7-eefbd1b90b50",
+      "DisplayName": "Entities",
+      "ColorIndex": 6
+    }
+  },
+  "NextColorIndex": 7
+}

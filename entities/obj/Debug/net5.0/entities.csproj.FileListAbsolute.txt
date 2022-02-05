@@ -1,0 +1,12 @@
+C:\Users\ayfer\source\repos\RecapProject\entities\bin\Debug\net5.0\entities.deps.json
+C:\Users\ayfer\source\repos\RecapProject\entities\bin\Debug\net5.0\entities.dll
+C:\Users\ayfer\source\repos\RecapProject\entities\bin\Debug\net5.0\ref\entities.dll
+C:\Users\ayfer\source\repos\RecapProject\entities\bin\Debug\net5.0\entities.pdb
+C:\Users\ayfer\source\repos\RecapProject\entities\obj\Debug\net5.0\entities.csproj.AssemblyReference.cache
+C:\Users\ayfer\source\repos\RecapProject\entities\obj\Debug\net5.0\entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ayfer\source\repos\RecapProject\entities\obj\Debug\net5.0\entities.AssemblyInfoInputs.cache
+C:\Users\ayfer\source\repos\RecapProject\entities\obj\Debug\net5.0\entities.AssemblyInfo.cs
+C:\Users\ayfer\source\repos\RecapProject\entities\obj\Debug\net5.0\entities.csproj.CoreCompileInputs.cache
+C:\Users\ayfer\source\repos\RecapProject\entities\obj\Debug\net5.0\entities.dll
+C:\Users\ayfer\source\repos\RecapProject\entities\obj\Debug\net5.0\ref\entities.dll
+C:\Users\ayfer\source\repos\RecapProject\entities\obj\Debug\net5.0\entities.pdb

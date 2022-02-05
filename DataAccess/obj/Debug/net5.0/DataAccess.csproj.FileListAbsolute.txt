@@ -1,0 +1,15 @@
+C:\Users\ayfer\source\repos\RecapProject\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
+C:\Users\ayfer\source\repos\RecapProject\DataAccess\bin\Debug\net5.0\DataAccess.dll
+C:\Users\ayfer\source\repos\RecapProject\DataAccess\bin\Debug\net5.0\ref\DataAccess.dll
+C:\Users\ayfer\source\repos\RecapProject\DataAccess\bin\Debug\net5.0\DataAccess.pdb
+C:\Users\ayfer\source\repos\RecapProject\DataAccess\bin\Debug\net5.0\entities.dll
+C:\Users\ayfer\source\repos\RecapProject\DataAccess\bin\Debug\net5.0\entities.pdb
+C:\Users\ayfer\source\repos\RecapProject\DataAccess\obj\Debug\net5.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\ayfer\source\repos\RecapProject\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ayfer\source\repos\RecapProject\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\ayfer\source\repos\RecapProject\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
+C:\Users\ayfer\source\repos\RecapProject\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\ayfer\source\repos\RecapProject\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CopyComplete
+C:\Users\ayfer\source\repos\RecapProject\DataAccess\obj\Debug\net5.0\DataAccess.dll
+C:\Users\ayfer\source\repos\RecapProject\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
+C:\Users\ayfer\source\repos\RecapProject\DataAccess\obj\Debug\net5.0\DataAccess.pdb
