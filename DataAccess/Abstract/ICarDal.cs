@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using DataAccess.Abstract;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,13 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete
 {
-    public interface ICarDal
+    public interface ICarDal : IEntityRepository<Car>
     {
-        List<Car> GetAll();
-        List<Car> GetId(int id);
-
-        void Add(Car car);
-        void Update(Car car);
-        void Remove(Car car);
     }
 }
