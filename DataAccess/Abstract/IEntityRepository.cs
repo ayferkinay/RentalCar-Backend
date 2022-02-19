@@ -11,10 +11,8 @@ namespace DataAccess.Abstract
     public interface IEntityRepository<T> where T : class, IEntity,new()
     {
 
-        List<T> GetAll(Expression<Func<T,bool>>filter=null);
-        T Get(Expression<Func<T,bool>>filter);
-
-
+        List<T> GetAll(Expression<Func<T,bool>>filter=null); //filtreleme yapabiliyoruz
+        T Get(Expression<Func<T,bool>> filter);  //tek bir kayıtın detayını alır
         void Add(T entity);
         void Update(T entity);
         void Remove(T entity);

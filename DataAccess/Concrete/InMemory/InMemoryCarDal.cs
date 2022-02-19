@@ -25,7 +25,31 @@ namespace DataAccess.Concrete.InMemory
                 new Car{Id=6, BrandId=2, ColorId=3, DailyPrice=1000, ModelYear=1990,Description="Kaza geçmişi var"},
             };
         }
-       
+
+        public void Add(Car car)
+        {
+            _cars.Add(car);
+        }
+
+        public void Remove(Car car)
+        {
+            Car removeCar = _cars.SingleOrDefault(c => c.Id == car.Id);
+            _cars.Remove(removeCar);
+        }
+
+        public void Update(Car car)
+        {
+            Car updateCar = _cars.SingleOrDefault(c => c.Id == car.Id);
+            updateCar.Id = car.Id;
+            updateCar.Description = car.Description;
+            updateCar.BrandId = car.BrandId;
+            updateCar.DailyPrice = car.DailyPrice;
+            updateCar.ColorId = car.ColorId;
+            updateCar.ModelYear = car.ModelYear;
+        }
+
+
+
         public List<Car> GetAll()
         {
             return _cars;
@@ -36,36 +60,7 @@ namespace DataAccess.Concrete.InMemory
             return  _cars.Where(c=>c.Id==id).ToList();
         }
 
-
-        public void Add(Car car)
-        {
-           _cars.Add(car);
-        }
-
-        public void Remove(Car car)
-        {
-            Car removeCar= _cars.SingleOrDefault(c=>c.Id == car.Id);
-            _cars.Remove(removeCar);
-        }
-
-        public void Update(Car car)
-        {
-            Car updateCar = _cars.SingleOrDefault(c => c.Id == car.Id);
-            updateCar.Id = car.Id;
-            updateCar.Description = car.Description;
-            updateCar.BrandId=car.BrandId;
-            updateCar.DailyPrice=car.DailyPrice;
-            updateCar.ColorId=car.ColorId;
-            updateCar.ModelYear=car.ModelYear;
-            Console.WriteLine("Araba Bilgileri Güncellendi.");
-        }
-
         public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Car GetT(Expression<Func<Car, bool>> filter)
         {
             throw new NotImplementedException();
         }
