@@ -1,4 +1,5 @@
 ﻿using Core.DataAccess.EntityFramework;
+using Core.Entity;
 using Entities.Concrete;
 using Entities.DTOs;
 using Microsoft.EntityFrameworkCore;
@@ -21,14 +22,14 @@ namespace DataAccess.Concrete.EntitiyFramework
                 var result = from car in context.Cars
                              join color in context.Colors
                              on car.Id equals color.ColorId
+                             join brand in context.Brands
+                             on car.Id equals brand.BrandId
                              select new CarDetailDto
                              {
                                  Id = car.Id,
-                                 ColorId = car.ColorId,
-                                 BrandId = car.BrandId,
-                                 DailyPrice = car.DailyPrice,
-                                 Description = car.Description,
-                                 ModelYear = car.ModelYear
+                                 BrandName = brand.BrandName,
+                                 ColorName=color.ColorName,
+                                 DailyPrice = car.DailyPrice
                              };
                 return result.ToList();
             }
