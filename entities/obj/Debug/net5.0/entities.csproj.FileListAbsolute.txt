@@ -10,3 +10,6 @@ C:\Users\ayfer\source\repos\RecapProject\entities\obj\Debug\net5.0\entities.cspr
 C:\Users\ayfer\source\repos\RecapProject\entities\obj\Debug\net5.0\entities.dll
 C:\Users\ayfer\source\repos\RecapProject\entities\obj\Debug\net5.0\ref\entities.dll
 C:\Users\ayfer\source\repos\RecapProject\entities\obj\Debug\net5.0\entities.pdb
+C:\Users\ayfer\source\repos\RecapProject\entities\bin\Debug\net5.0\Core.dll
+C:\Users\ayfer\source\repos\RecapProject\entities\bin\Debug\net5.0\Core.pdb
+C:\Users\ayfer\source\repos\RecapProject\entities\obj\Debug\net5.0\Entities.csproj.CopyComplete

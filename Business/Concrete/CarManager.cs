@@ -2,6 +2,7 @@
 using DataAccess.Concrete;
 using DataAccess.Concrete.EntitiyFramework;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,22 +14,11 @@ namespace Business.Concrete
     public class CarManager : ICarService
     {
         ICarDal _cardDal;
-        //private EfBrandDal efBrandDal;
-        //private EfColorDal efColorDal;
-            
 
         public CarManager(ICarDal carDal)
         {
             _cardDal = carDal;
         }
-        //public CarManager(EfColorDal efColorDal)
-        //{
-        //    this.efColorDal = efColorDal;
-        //}
-        //public CarManager(EfBrandDal efBrandDal)
-        //{
-        //    this.efBrandDal = efBrandDal;
-        //}
 
         public List<Car> GetByBrandId(int brandId)
         {
@@ -46,6 +36,9 @@ namespace Business.Concrete
             return _cardDal.GetAll();
         }
 
-      
+        public List<CarDetailDto> GetCarDetails()
+        {
+            return _cardDal.GetCarDetails();
+        }
     }
 }

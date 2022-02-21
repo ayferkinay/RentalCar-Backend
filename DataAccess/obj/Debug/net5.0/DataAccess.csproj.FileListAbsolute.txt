@@ -13,3 +13,5 @@ C:\Users\ayfer\source\repos\RecapProject\DataAccess\obj\Debug\net5.0\DataAccess.
 C:\Users\ayfer\source\repos\RecapProject\DataAccess\obj\Debug\net5.0\DataAccess.dll
 C:\Users\ayfer\source\repos\RecapProject\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
 C:\Users\ayfer\source\repos\RecapProject\DataAccess\obj\Debug\net5.0\DataAccess.pdb
+C:\Users\ayfer\source\repos\RecapProject\DataAccess\bin\Debug\net5.0\Core.dll
+C:\Users\ayfer\source\repos\RecapProject\DataAccess\bin\Debug\net5.0\Core.pdb
