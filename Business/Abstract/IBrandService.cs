@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,14 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    internal interface IBrandService
+    public interface IBrandService
     {
+        List<Brand> GetAll();
+        
+        Brand GetById(int brandId);
+
+        void Add(Brand brand);
+        void Update(Brand brand);
+        void Delete(Brand brand);
     }
 }

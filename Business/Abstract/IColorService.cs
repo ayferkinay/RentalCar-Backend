@@ -11,5 +11,9 @@ namespace Business.Abstract
     {
         List<Colorr> GetAll();
         Colorr GetById(int ColorId);
+
+        void Add(Colorr Color);
+        void Update(Colorr Color);
+        void Delete(Colorr Color);
     }
 }

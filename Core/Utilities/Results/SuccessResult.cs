@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Core.Utilities.Results
 {
-    internal class SuccessResult
+    public class SuccessResult:Result
     {
+        public SuccessResult(string message):base(true)
+        {
+        }
+        public SuccessResult():base(true)
+        {
+
+        }
     }
 }

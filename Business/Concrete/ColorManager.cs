@@ -18,6 +18,16 @@ namespace Business.Concrete
             _colorDal = colorDal;
         }
 
+        public void Add(Colorr Color)
+        {
+            _colorDal.Add(Color);
+        }
+
+        public void Delete(Colorr Color)
+        {
+            _colorDal.Delete(Color);
+        }
+
         public List<Colorr> GetAll()
         {
            return _colorDal.GetAll();
@@ -26,6 +36,11 @@ namespace Business.Concrete
         public Colorr GetById(int colorId)
         {
             return _colorDal.Get(c=>c.ColorId == colorId);
+        }
+
+        public void Update(Colorr Color)
+        {
+            _colorDal.Update(Color);
         }
     }
 }
