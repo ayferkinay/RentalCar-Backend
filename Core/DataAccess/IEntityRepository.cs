@@ -17,3 +17,4 @@ namespace Core.DataAccess.EntityFramework
         void Delete(T entity);
     }
 }
+    
