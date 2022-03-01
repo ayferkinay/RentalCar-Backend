@@ -11,10 +11,11 @@ namespace Business.Abstract
 {
     public interface ICarService
     {
-        List<Car> GetAll();
-        List<Car> GetByColorId(int colorId);
-        List<Car> GetByBrandId(int brandId);
-        List<CarDetailDto> GetCarDetails();
+        //  IDataResult<T> buradaki t List<Car> olan kısma tekabül ediyor
+        IDataResult<List<Car>> GetAll();
+        IDataResult<List<Car>> GetByColorId(int colorId);
+        IDataResult<List<Car>> GetByBrandId(int brandId);
+        IDataResult<List<CarDetailDto>> GetCarDetails();
 
         IResult Add(Car car);
         IResult Update(Car car);

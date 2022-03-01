@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Concrete;
 using DataAccess.Concrete.EntitiyFramework;
@@ -21,25 +22,30 @@ namespace Business.Concrete
             _cardDal = carDal;
         }
 
-        public List<Car> GetByBrandId(int brandId)
+        public IDataResult<List<Car>> GetByBrandId(int brandId)
         {
-            return _cardDal.GetAll(c=>c.BrandId==brandId);
+            return new SuccessDataResult<List<Car>>(_cardDal.GetAll(c=>c.BrandId==brandId));
         }
 
-        public List<Car> GetByColorId(int colorId)
+        public IDataResult<List<Car>> GetByColorId(int colorId)
         {
-            return _cardDal.GetAll(c => c.ColorId == colorId);
+            return new SuccessDataResult<List<Car>>(_cardDal.GetAll(c => c.ColorId == colorId));
         }
 
-        public List<Car> GetAll()
+        public IDataResult<List<Car>> GetAll()
         {
+            if (DateTime.Now.Hour==11)
+            {
+                return new ErrorDataResult<List<Car>>(Messages.MaintananceTime);
+            }
+
             //iş kodları
-            return _cardDal.GetAll();
+            return new SuccessDataResult<List<Car>>(_cardDal.GetAll(),Messages.CarListed);
         }
 
-        public List<CarDetailDto> GetCarDetails()
+        public IDataResult<List<CarDetailDto>> GetCarDetails()
         {
-            return _cardDal.GetCarDetails();
+            return new SuccessDataResult<List<CarDetailDto>>( _cardDal.GetCarDetails());
         }
 
         public IResult Add(Car car)
@@ -47,25 +53,25 @@ namespace Business.Concrete
 
             if (car.Description.Length<2)
             {
-                return new ErrorResult("Ürün açıklaması yeterli değil");
+                return new ErrorResult(Messages.CarDescInvalid);
             }
 
             _cardDal.Add(car);
 
-            return new Result(true,"Ürün Eklendi");
+            return new SuccessResult(Messages.CarAdded);
         }
 
         public IResult Update(Car car)
         {
             _cardDal.Update(car);
-            return new SuccessResult("Ürün Güncellendi"); //success result zaten true olduğu için true olarak belirtmeye gerek yok 
+            return new SuccessResult(Messages.CarUpdated); //success result zaten true olduğu için true olarak belirtmeye gerek yok 
             //return new SuccessResult(); bu şekilde de yazabilrdik. bu durumda parametresiz ctor çalışırdı ve message olmayacak şekilde true dönerdi
         }
 
         public IResult Delete(Car car)
         {
             _cardDal.Delete(car);
-            return new SuccessResult("Ürün Silindi");
+            return new SuccessResult(Messages.CarDeleted);
         }
     }
 }
