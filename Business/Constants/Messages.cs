@@ -13,10 +13,43 @@ namespace Business.Constants
         public static string CarUpdated= "Araba bilgisi Güncellendi";
         public static string CarDeleted = "Araba bilgisi Silindi";
         public static string CarDescInvalid = "Araba bilgisi yeterli değil";
-        //public static List<Car> CarListed;
-        //public static List<Car> MaintananceTime;
         public static string MaintananceTime = "Sistem şu an bakımda";
         public static string CarListed = "Arabalar Listelendi";
+
+
+        public static string ColorListed = "Renkler listelendi";
+        public static string ColorIsInvalid = "Renk bilgileri hatalı";
+        public static string ColorAdded = "Renk eklendi";
+        public static string ColorDeleted = "Renk Silindi";
+        public static string ColorUpdated = "Renk Güncellendi";
+
+
+        public static string BrandListed = "Markalar listelendi";
+        public static string BrandIsInvalid = "Marka bilgileri hatalı";
+        public static string BrandAdded = "Marka eklendi";
+        public static string BrandDeleted = "Marka Silindi";
+        public static string BrandUpdated = "Marka Güncellendi";
+
+        public static string UserListed = "Kullanıcılar listelendi";
+        public static string UserIsInvalid = "Kullanıcı bilgileri hatalı";
+        public static string UserAdded = "Kullanıcı eklendi";
+        public static string UserDeleted = "Kullanıcı silindi";
+        public static string UserUpdated = "Kullanıcı güncellendi";
+
+        public static string CustomerListed = "Müşteriler listelendi";
+        public static string CustomerIsInvalid = "Müşteri bilgileri hatalı";
+        public static string CustomerAdded = "Müşteri eklendi";
+        public static string CustomerDeleted = "Müşteri silindi";
+        public static string CustomerUpdated = "Müşteri güncellendi";
+        
+        //public static string AuthorizationDenied = "Yetkiniz yok";
+        //public static string UserRegistered = "Kayıt oldu";
+        //public static string UserNotFound = "Kullanıcı bulunamadı";
+        //public static string PasswordError = "Parola hatası";
+        //public static string SuccessfulLogin = "Başarılı giriş";
+        //public static string UserAlreadyExists = "Kullanıcı mevcut";
+        //public static string AccessTokenCreated = "Token oluşturuldu";
+
 
 
     }
