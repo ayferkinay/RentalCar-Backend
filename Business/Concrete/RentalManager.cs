@@ -22,7 +22,13 @@ namespace Business.Concrete
 
         public IResult Add(Rental rental)
         {
-            throw new NotImplementedException();
+            //if (rental.ReturnDate== null)
+            //{
+            //    return new ErrorResult(Messages.RentAdded);
+            //}
+            //return new SuccessResult(Messages.RentIsInvalid);
+            _rentalDal.Add(rental);
+            return new SuccessResult(Messages.RentAdded);
         }
 
         public IResult Delete(Rental rental)
