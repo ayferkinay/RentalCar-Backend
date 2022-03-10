@@ -42,6 +42,15 @@ namespace Business.Constants
         public static string CustomerDeleted = "Müşteri silindi";
         public static string CustomerUpdated = "Müşteri güncellendi";
         
+        
+        public static string RentListed = "Kiralama Bilgilerilistelendi";
+        public static string RentIsInvalid = "Kiralama  bilgileri hatalı";
+        public static string RentAdded = "Kiralama Bilgileri eklendi";
+        public static string RentDeleted = "Kiralama bilgileri silindi";
+        public static string rentUpdated = "Kiralama Bilgileri güncellendi";
+
+
+        
         //public static string AuthorizationDenied = "Yetkiniz yok";
         //public static string UserRegistered = "Kayıt oldu";
         //public static string UserNotFound = "Kullanıcı bulunamadı";
