@@ -1,5 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results;
 using DataAccess.Concrete;
 using DataAccess.Concrete.EntitiyFramework;
@@ -22,6 +24,7 @@ namespace Business.Concrete
             _cardDal = carDal;
         }
 
+        [ValidationAspect(typeof(CarValidator))]
         public IDataResult<List<Car>> GetByBrandId(int brandId)
         {
             return new SuccessDataResult<List<Car>>(_cardDal.GetAll(c=>c.BrandId==brandId));
