@@ -67,7 +67,7 @@ namespace Business.Concrete
         public IResult Update(Car car)
         {
             _cardDal.Update(car);
-            return new SuccessResult(Messages.CarUpdated); //success result zaten true olduğu için true olarak belirtmeye gerek yok 
+            return new SuccessResult(Messages.CarUpdated); //success result zaten true olduğu için true olarak belirtmeye gerek yok  
             //return new SuccessResult(); bu şekilde de yazabilrdik. bu durumda parametresiz ctor çalışırdı ve message olmayacak şekilde true dönerdi
         }
 

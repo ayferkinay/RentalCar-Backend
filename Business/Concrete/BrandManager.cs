@@ -21,32 +21,40 @@ namespace Business.Concrete
         {
             _brandDal = brandDal;
         }
+
         [ValidationAspect(typeof(BrandValidator))]
-        IResult IBrandService.Add(Brand brand)
+        public IResult Add(Brand brand)
         {
             _brandDal.Add(brand);
 
-            return new SuccessResult(Messages.BrandAdded);
+             return new SuccessResult(Messages.BrandAdded);
         }
+        //
+        //IResult Add(Brand brand)
+        //{ 
+        //    _brandDal.Add(brand);
 
-        IResult IBrandService.Delete(Brand brand)
+        //    return new SuccessResult(Messages.BrandAdded);
+        //}
+
+        public IResult Delete(Brand brand)
         {
             _brandDal.Delete(brand);
 
             return new SuccessResult(Messages.BrandDeleted);
         }
 
-        IDataResult<List<Brand>> IBrandService.GetAll()
+        public IDataResult<List<Brand>> GetAll()
         {
             return new SuccessDataResult<List<Brand>>(Messages.BrandListed);
         }
 
-        IDataResult<Brand> IBrandService.GetById(int brandId)
+        public IDataResult<Brand> GetById(int brandId)
         {
             return new SuccessDataResult<Brand>(Messages.BrandIsInvalid);
         }
-
-        IResult IBrandService.Update(Brand brand)
+         
+         public IResult Update(Brand brand)
         {
             _brandDal.Update(brand);
 

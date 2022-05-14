@@ -1,12 +1,15 @@
 ﻿using Autofac;
 using Autofac.Extras.DynamicProxy;
 using Business.Abstract;
+using Business.CCS;
 using Business.Concrete;
 using Castle.DynamicProxy;
+using Core.Utilities.Helpers.FileHelper;
 using Core.Utilities.Interceptors;
 using DataAccess.Abstract;
 using DataAccess.Concrete;
 using DataAccess.Concrete.EntitiyFramework;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,23 +25,32 @@ namespace Business.DependencyResolves.Autofac
             builder.RegisterType<CarManager>().As<ICarService>().SingleInstance();//herhangi bir constructorda CarService istenirse ona Car managerın bir isntance ı oluşup verilsin
             builder.RegisterType<EfCarDal>().As<ICarDal>().SingleInstance();
 
-            builder.RegisterType<BrandManager>().As<IBrandService>().SingleInstance();
+            builder.RegisterType<BrandManager>().As<IBrandService>().SingleInstance();//brand Ioc
             builder.RegisterType<EfBrandDal>().As<IBrandDal>().SingleInstance();
 
-            builder.RegisterType<ColorManager>().As<IColorService>().SingleInstance();
+            builder.RegisterType<ColorManager>().As<IColorService>().SingleInstance();//color Ioc
             builder.RegisterType<EfColorDal>().As<IColorDal>().SingleInstance();
 
-            builder.RegisterType<CustomerManager>().As<ICustomerService>().SingleInstance();
+            builder.RegisterType<CustomerManager>().As<ICustomerService>().SingleInstance();//customer Ioc
             builder.RegisterType<EfCustomerDal>().As<ICustomerDal>().SingleInstance();
 
-            builder.RegisterType<RentalManager>().As<IRentalService>().SingleInstance();
-            builder.RegisterType<EfRentalDall>().As<IRentalDal>().SingleInstance();
-
-            builder.RegisterType<UserManager>().As<IUserService>().SingleInstance();
+            builder.RegisterType<UserManager>().As<IUserService>().SingleInstance();//user Ioc
             builder.RegisterType<EfUserDal>().As<IUserDal>().SingleInstance();
 
-            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            builder.RegisterType<RentalManager>().As<IRentalService>().SingleInstance();//rental Ioc
+            builder.RegisterType<EfRentalDall>().As<IRentalDal>().SingleInstance();
 
+
+            builder.RegisterType<FileLogger>().As<ILogger>().SingleInstance();//fileloger Ioc
+            builder.RegisterType<DatabaseLogger>().As<ILogger>().SingleInstance();
+
+            builder.RegisterType<CarImageManager>().As<ICarImageService>().SingleInstance();//CarImage Ioc
+            builder.RegisterType<EfCarImageDal>().As<ICarImageDal>().SingleInstance();
+
+            builder.RegisterType<FileHelperManager>().As<IFileHelper>().SingleInstance();
+
+
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 
             builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces()
                 .EnableInterfaceInterceptors(new ProxyGenerationOptions()

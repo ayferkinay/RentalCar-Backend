@@ -9,5 +9,6 @@ namespace DataAccess.Concrete.EntitiyFramework
 {
     public class EfColorDal : EfEntityRepositoryBase<Colorr, CarContext>, IColorDal
     {
+
     }
 }

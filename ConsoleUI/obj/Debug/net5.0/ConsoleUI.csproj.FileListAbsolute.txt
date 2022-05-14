@@ -73,3 +73,5 @@ C:\Users\ayfer\source\repos\RecapProject\ConsoleUI\bin\Debug\net5.0\Autofac.Exte
 C:\Users\ayfer\source\repos\RecapProject\ConsoleUI\bin\Debug\net5.0\Autofac.Extras.DynamicProxy.dll
 C:\Users\ayfer\source\repos\RecapProject\ConsoleUI\bin\Debug\net5.0\Castle.Core.dll
 C:\Users\ayfer\source\repos\RecapProject\ConsoleUI\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\ayfer\source\repos\RecapProject\ConsoleUI\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\ayfer\source\repos\RecapProject\ConsoleUI\bin\Debug\net5.0\System.IO.Pipelines.dll
