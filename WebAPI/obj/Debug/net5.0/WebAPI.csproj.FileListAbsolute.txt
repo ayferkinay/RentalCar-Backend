@@ -71,3 +71,15 @@ C:\Users\ayfer\source\repos\RecapProject\WebAPI\bin\Debug\net5.0\FluentValidatio
 C:\Users\ayfer\source\repos\RecapProject\WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\ayfer\source\repos\RecapProject\WebAPI\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 C:\Users\ayfer\source\repos\RecapProject\WebAPI\bin\Debug\net5.0\System.IO.Pipelines.dll
+C:\Users\ayfer\source\repos\RecapProject\WebAPI\bin\Debug\net5.0\Microsoft.Extensions.Configuration.dll
+C:\Users\ayfer\source\repos\RecapProject\WebAPI\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\ayfer\source\repos\RecapProject\WebAPI\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\ayfer\source\repos\RecapProject\WebAPI\bin\Debug\net5.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\ayfer\source\repos\RecapProject\WebAPI\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\ayfer\source\repos\RecapProject\WebAPI\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\ayfer\source\repos\RecapProject\WebAPI\bin\Debug\net5.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\ayfer\source\repos\RecapProject\WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\ayfer\source\repos\RecapProject\WebAPI\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ayfer\source\repos\RecapProject\WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\ayfer\source\repos\RecapProject\WebAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\ayfer\source\repos\RecapProject\WebAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll

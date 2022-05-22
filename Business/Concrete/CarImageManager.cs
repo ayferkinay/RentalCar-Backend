@@ -26,11 +26,7 @@ namespace Business.Concrete
 
         public IResult Add(IFormFile file, int carId)
         {
-            //IResult result = BusinessRules.Run(CheckIfCarImageLimit(carImage.CarId));
-            //if (result != null)
-            //{
-            //    return result;
-            //} 
+        
             string imagePath = _fileHelper.Upload(file, PathConstants.ImagePath);
             _carImageDal.Add(new CarImage { CarId = carId, ImagePath = imagePath });
             return new SuccessResult("Resim başarıyla yüklendi");
