@@ -84,3 +84,7 @@ C:\Users\ayfer\source\repos\RecapProject\ConsoleUI\bin\Debug\net5.0\Microsoft.Ex
 C:\Users\ayfer\source\repos\RecapProject\ConsoleUI\bin\Debug\net5.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\ayfer\source\repos\RecapProject\ConsoleUI\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\ayfer\source\repos\RecapProject\ConsoleUI\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\ayfer\source\repos\RecapProject\ConsoleUI\bin\Debug\net5.0\Microsoft.AspNetCore.Http.dll
+C:\Users\ayfer\source\repos\RecapProject\ConsoleUI\bin\Debug\net5.0\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\ayfer\source\repos\RecapProject\ConsoleUI\bin\Debug\net5.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\ayfer\source\repos\RecapProject\ConsoleUI\bin\Debug\net5.0\Microsoft.Net.Http.Headers.dll

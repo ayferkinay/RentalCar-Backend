@@ -1,6 +1,8 @@
 using Business.Abstract;
 using Business.BusinessAspect.Autofac;
 using Business.Concrete;
+using Core.DepenedencyResolves;
+using Core.Extension;
 using Core.Utilities.IoC;
 using Core.Utilities.Security.Encryption;
 using Core.Utilities.Security.JWT;
@@ -45,8 +47,7 @@ namespace WebAPI
 
 
 
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
+        
             var tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();  //apiye jwt kullanacýðýmýzý bildirdil
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -62,9 +63,12 @@ namespace WebAPI
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = SecurityKeyHelper.CreateSecurityKey(tokenOptions.SecurityKey)
                     };
-                });
-            ServiceTool.Create(services);
-     
+              });
+                services.AddDependencyResolvers(new ICoreModule[]       //coreModule dýþýnda farklý injection oluþturursak buraya ekleme yapabilirz
+               {
+                    new CoreModule()
+               });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
