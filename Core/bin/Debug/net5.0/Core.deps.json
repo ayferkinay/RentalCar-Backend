@@ -14,10 +14,12 @@
           "FluentValidation": "11.0.0",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
+          "Microsoft.Build": "17.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
           "Microsoft.Extensions.Configuration.Binder": "6.0.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "6.0.0",
-          "System.IdentityModel.Tokens.Jwt": "6.18.0"
+          "System.IdentityModel.Tokens.Jwt": "6.18.0",
+          "log4net": "2.0.14"
         },
         "runtime": {
           "Core.dll": {}
@@ -86,6 +88,17 @@
           }
         }
       },
+      "log4net/2.0.14": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/log4net.dll": {
+            "assemblyVersion": "2.0.14.0",
+            "fileVersion": "2.0.14.0"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Http/2.2.2": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
@@ -134,6 +147,14 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {
             "assemblyVersion": "2.2.0.0",
             "fileVersion": "2.2.0.18316"
+          }
+        }
+      },
+      "Microsoft.Build/17.2.0": {
+        "runtime": {
+          "lib/net472/Microsoft.Build.dll": {
+            "assemblyVersion": "15.1.0.0",
+            "fileVersion": "17.2.0.20702"
           }
         }
       },
@@ -1637,6 +1658,13 @@
       "path": "fluentvalidation/11.0.0",
       "hashPath": "fluentvalidation.11.0.0.nupkg.sha512"
     },
+    "log4net/2.0.14": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KevyXUuhOyhx7l1jWwq6ZGVlRC2Aetg0qDp6rJpfSZGcDPKQDwfOE6yEuVkVf0kEP08NQqBDn/TQ/TJv4wgyhw==",
+      "path": "log4net/2.0.14",
+      "hashPath": "log4net.2.0.14.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Http/2.2.2": {
       "type": "package",
       "serviceable": true,
@@ -1664,6 +1692,13 @@
       "sha512": "sha512-9ErxAAKaDzxXASB/b5uLEkLgUWv1QbeVxyJYEHQwMaxXOeFFVkQxiq8RyfVcifLU7NR0QY0p3acqx4ZpYfhHDg==",
       "path": "microsoft.aspnetcore.webutilities/2.2.0",
       "hashPath": "microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.Build/17.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rpf+7b8WHcgkrEQnGcV8FiAIl15ZC7Oit4t213fMoRdJb8SUYKdB71ZzWFaV5f9glN3y+R4cxRDY0dkwaIpwYw==",
+      "path": "microsoft.build/17.2.0",
+      "hashPath": "microsoft.build.17.2.0.nupkg.sha512"
     },
     "Microsoft.CSharp/4.5.0": {
       "type": "package",

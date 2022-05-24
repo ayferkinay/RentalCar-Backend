@@ -70,6 +70,18 @@
           "lib/net5.0/FluentValidation.dll": {}
         }
       },
+      "log4net/2.0.14": {
+        "type": "package",
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/log4net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/log4net.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Http/2.2.2": {
         "type": "package",
         "dependencies": {
@@ -123,6 +135,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {}
+        }
+      },
+      "Microsoft.Build/17.2.0": {
+        "type": "package",
+        "compile": {
+          "ref/net472/Microsoft.Build.dll": {}
+        },
+        "runtime": {
+          "lib/net472/Microsoft.Build.dll": {}
         }
       },
       "Microsoft.CSharp/4.5.0": {
@@ -1071,7 +1092,7 @@
           "System.Security.Permissions": "4.7.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {}
+          "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
@@ -1854,7 +1875,7 @@
           "System.Security.Principal.Windows": "4.7.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {}
+          "ref/netstandard2.0/System.Security.AccessControl.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Security.AccessControl.dll": {}
@@ -2091,7 +2112,7 @@
           "System.Windows.Extensions": "4.7.0"
         },
         "compile": {
-          "ref/netcoreapp3.0/_._": {}
+          "ref/netcoreapp3.0/System.Security.Permissions.dll": {}
         },
         "runtime": {
           "lib/netcoreapp3.0/System.Security.Permissions.dll": {}
@@ -2100,7 +2121,7 @@
       "System.Security.Principal.Windows/4.7.0": {
         "type": "package",
         "compile": {
-          "ref/netcoreapp3.0/_._": {}
+          "ref/netcoreapp3.0/System.Security.Principal.Windows.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Security.Principal.Windows.dll": {}
@@ -2259,7 +2280,7 @@
           "System.Drawing.Common": "4.7.0"
         },
         "compile": {
-          "ref/netcoreapp3.0/_._": {}
+          "ref/netcoreapp3.0/System.Windows.Extensions.dll": {}
         },
         "runtime": {
           "lib/netcoreapp3.0/System.Windows.Extensions.dll": {}
@@ -2379,10 +2400,12 @@
           "FluentValidation": "11.0.0",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
+          "Microsoft.Build": "17.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
           "Microsoft.Extensions.Configuration.Binder": "6.0.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "6.0.0",
-          "System.IdentityModel.Tokens.Jwt": "6.18.0"
+          "System.IdentityModel.Tokens.Jwt": "6.18.0",
+          "log4net": "2.0.14"
         },
         "compile": {
           "bin/placeholder/Core.dll": {}
@@ -2515,6 +2538,34 @@
         "lib/netstandard2.1/FluentValidation.xml"
       ]
     },
+    "log4net/2.0.14": {
+      "sha512": "KevyXUuhOyhx7l1jWwq6ZGVlRC2Aetg0qDp6rJpfSZGcDPKQDwfOE6yEuVkVf0kEP08NQqBDn/TQ/TJv4wgyhw==",
+      "type": "package",
+      "path": "log4net/2.0.14",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/log4net.dll",
+        "lib/net20/log4net.xml",
+        "lib/net35-client/log4net.dll",
+        "lib/net35-client/log4net.xml",
+        "lib/net35/log4net.dll",
+        "lib/net35/log4net.xml",
+        "lib/net40-client/log4net.dll",
+        "lib/net40-client/log4net.xml",
+        "lib/net40/log4net.dll",
+        "lib/net40/log4net.xml",
+        "lib/net45/log4net.dll",
+        "lib/net45/log4net.xml",
+        "lib/netstandard1.3/log4net.dll",
+        "lib/netstandard1.3/log4net.xml",
+        "lib/netstandard2.0/log4net.dll",
+        "lib/netstandard2.0/log4net.xml",
+        "log4net.2.0.14.nupkg.sha512",
+        "log4net.nuspec",
+        "package-icon.png"
+      ]
+    },
     "Microsoft.AspNetCore.Http/2.2.2": {
       "sha512": "BAibpoItxI5puk7YJbIGj95arZueM8B8M5xT1fXBn3hb3L2G3ucrZcYXv1gXdaroLbntUs8qeV8iuBrpjQsrKw==",
       "type": "package",
@@ -2571,6 +2622,30 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.xml",
         "microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
         "microsoft.aspnetcore.webutilities.nuspec"
+      ]
+    },
+    "Microsoft.Build/17.2.0": {
+      "sha512": "Rpf+7b8WHcgkrEQnGcV8FiAIl15ZC7Oit4t213fMoRdJb8SUYKdB71ZzWFaV5f9glN3y+R4cxRDY0dkwaIpwYw==",
+      "type": "package",
+      "path": "microsoft.build/17.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "MSBuild-NuGet-Icon.png",
+        "README.md",
+        "lib/net472/Microsoft.Build.dll",
+        "lib/net472/Microsoft.Build.pdb",
+        "lib/net472/Microsoft.Build.xml",
+        "lib/net6.0/Microsoft.Build.dll",
+        "lib/net6.0/Microsoft.Build.pdb",
+        "lib/net6.0/Microsoft.Build.xml",
+        "microsoft.build.17.2.0.nupkg.sha512",
+        "microsoft.build.nuspec",
+        "notices/THIRDPARTYNOTICES.txt",
+        "ref/net472/Microsoft.Build.dll",
+        "ref/net472/Microsoft.Build.xml",
+        "ref/net6.0/Microsoft.Build.dll",
+        "ref/net6.0/Microsoft.Build.xml"
       ]
     },
     "Microsoft.CSharp/4.5.0": {
@@ -8014,5 +8089,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Build 17.2.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Build",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

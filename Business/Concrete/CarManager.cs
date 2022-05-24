@@ -2,6 +2,8 @@
 using Business.BusinessAspect.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Caching;
+using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results;
 using DataAccess.Concrete;
@@ -37,6 +39,8 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Car>>(_cardDal.GetAll(c => c.ColorId == colorId));
         }
 
+
+        [CacheAspect] //key,value
         public IDataResult<List<Car>> GetAll()
         {
             if (DateTime.Now.Hour==11)
@@ -48,11 +52,15 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Car>>(_cardDal.GetAll(),Messages.CarListed);
         }
 
+
+        [CacheAspect]
         public IDataResult<List<CarDetailDto>> GetCarDetails()
         {
             return new SuccessDataResult<List<CarDetailDto>>( _cardDal.GetCarDetails());
         }
 
+        [ValidationAspect(typeof(CarValidator))]
+        [CacheRemoveAspect("IProductService.Get")]
         public IResult Add(Car car)
         {
 
@@ -66,6 +74,9 @@ namespace Business.Concrete
             return new SuccessResult(Messages.CarAdded);
         }
 
+        [SecuredOperation("car.add,admin")]
+        [ValidationAspect(typeof(CarValidator))]
+        [CacheRemoveAspect("IProductService.Get")] // IPRoductService de bütün getleri sil
         public IResult Update(Car car)
         {
             _cardDal.Update(car);
@@ -77,6 +88,22 @@ namespace Business.Concrete
         {
             _cardDal.Delete(car);
             return new SuccessResult(Messages.CarDeleted);
+        }
+
+
+        [TransactionScopeAspect]
+        public IResult AddTransactionalTest(Car car)
+        {
+
+            Add(car);
+            if (car.DailyPrice <0)
+            {
+                throw new Exception("");
+            }
+
+            Add(car);
+
+            return null;
         }
     }
 }

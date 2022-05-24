@@ -69,6 +69,10 @@
               "target": "Package",
               "version": "[5.0.17, )"
             },
+            "Microsoft.Build": {
+              "target": "Package",
+              "version": "[17.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -84,6 +88,10 @@
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.18.0, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.14, )"
             }
           },
           "imports": [

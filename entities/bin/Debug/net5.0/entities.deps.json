@@ -128,6 +128,14 @@
           }
         }
       },
+      "Microsoft.Build/17.2.0": {
+        "runtime": {
+          "lib/net472/Microsoft.Build.dll": {
+            "assemblyVersion": "15.1.0.0",
+            "fileVersion": "17.2.0.20702"
+          }
+        }
+      },
       "Microsoft.CSharp/4.5.0": {},
       "Microsoft.Data.SqlClient/2.0.1": {
         "dependencies": {
@@ -1593,6 +1601,7 @@
           "FluentValidation": "11.0.0",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
+          "Microsoft.Build": "17.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
           "Microsoft.Extensions.Configuration.Binder": "6.0.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "6.0.0",
@@ -1672,6 +1681,13 @@
       "sha512": "sha512-9ErxAAKaDzxXASB/b5uLEkLgUWv1QbeVxyJYEHQwMaxXOeFFVkQxiq8RyfVcifLU7NR0QY0p3acqx4ZpYfhHDg==",
       "path": "microsoft.aspnetcore.webutilities/2.2.0",
       "hashPath": "microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.Build/17.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rpf+7b8WHcgkrEQnGcV8FiAIl15ZC7Oit4t213fMoRdJb8SUYKdB71ZzWFaV5f9glN3y+R4cxRDY0dkwaIpwYw==",
+      "path": "microsoft.build/17.2.0",
+      "hashPath": "microsoft.build.17.2.0.nupkg.sha512"
     },
     "Microsoft.CSharp/4.5.0": {
       "type": "package",

@@ -17,3 +17,6 @@ C:\Users\ayfer\source\repos\RecapProject\Business\obj\Debug\net5.0\ref\Business.
 C:\Users\ayfer\source\repos\RecapProject\Business\obj\Debug\net5.0\Business.pdb
 C:\Users\ayfer\source\repos\RecapProject\Business\bin\Debug\net5.0\Core.dll
 C:\Users\ayfer\source\repos\RecapProject\Business\bin\Debug\net5.0\Core.pdb
+C:\Users\ayfer\source\repos\RecapProject\Business\bin\Debug\net5.0\Business.runtimeconfig.json
+C:\Users\ayfer\source\repos\RecapProject\Business\bin\Debug\net5.0\Business.runtimeconfig.dev.json
+C:\Users\ayfer\source\repos\RecapProject\Business\obj\Debug\net5.0\Business.genruntimeconfig.cache

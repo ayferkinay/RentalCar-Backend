@@ -4,16 +4,14 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Core.Extension
+namespace Core.Extensions
 {
-
     public static class ClaimExtensions
     {
-        public static void AddEmail(this ICollection<Claim> claims, string email) //bu class .net e ait bir calss. biz burada kendi metodumuzu ekliyoruz yani this ICollection<Claim> extend ediyoruz
+        public static void AddEmail(this ICollection<Claim> claims, string email)
         {
-            claims.Add(new Claim(JwtRegisteredClaimNames.Email, email));
+            claims.Add(new Claim(JwtRegisteredClaimNames.Email,email));
         }
 
         public static void AddName(this ICollection<Claim> claims, string name)
@@ -28,7 +26,7 @@ namespace Core.Extension
 
         public static void AddRoles(this ICollection<Claim> claims, string[] roles)
         {
-            roles.ToList().ForEach(role => claims.Add(new Claim(ClaimTypes.Role, role)));
+            roles.ToList().ForEach(role=>claims.Add(new Claim(ClaimTypes.Role, role)));
         }
     }
 }

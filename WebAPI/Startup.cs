@@ -2,7 +2,7 @@ using Business.Abstract;
 using Business.BusinessAspect.Autofac;
 using Business.Concrete;
 using Core.DepenedencyResolves;
-using Core.Extension;
+using Core.Extensions;
 using Core.Utilities.IoC;
 using Core.Utilities.Security.Encryption;
 using Core.Utilities.Security.JWT;
@@ -84,6 +84,7 @@ namespace WebAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
             app.UseAuthentication();
 
             app.UseAuthorization();

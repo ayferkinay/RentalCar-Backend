@@ -50,7 +50,8 @@ namespace Business.Constants
         public static string rentUpdated = "Kiralama Bilgileri güncellendi";
 
         public static string AuthorizationDenied = "yetkiniz Yok";
-
+        public static string AccessTokenCreated = "Access token başarıyla oluşturuldu";
+        public static string ProductNameAlreadyExists = "Ürün ismi zaten mevcut";
 
         //public static string AuthorizationDenied = "Yetkiniz yok";
         //public static string UserRegistered = "Kayıt oldu";
