@@ -66,14 +66,15 @@ namespace Business.Concrete
         [CacheAspect]
         public IDataResult<User> GetByMail(string email)
         {
-            return new SuccessDataResult<User>(_userDal.GetById(x => x.Email == email));
+            return new SuccessDataResult<User>(_userDal.GetAll(x=> x.Email == email).FirstOrDefault());
         }
+
 
         [PerformanceAspect(5)]
         [CacheAspect]
-        public List<OperationClaim> GetClaims(User user)
+        public IDataResult<List<OperationClaim>> GetClaims(User user)
         {
-            return _userDal.GetClaims(user);
+            return new SuccessDataResult<List<OperationClaim>>(_userDal.GetClaims(user));
         }
 
 

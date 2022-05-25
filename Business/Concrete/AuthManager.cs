@@ -54,18 +54,18 @@ namespace Business.Concrete
 
         public IResult UserExists(string email)
         {
-            if (_userService.GetByMail(email) != null)
-            {
+            var result = _userService.GetByMail(email);
+             if(result.Data !=null)
                 return new ErrorResult("kullanıcı zaten mevcut"); //Messages.UserAlreadyExists
-            }
+            
             return new SuccessResult();
         }
 
         public IDataResult<AccessToken> CreateAccessToken(User user)
         {
             var claims = _userService.GetClaims(user);
-            var accessToken = _tokenHelper.CreateToken(user, claims);
-            return new SuccessDataResult<AccessToken>(accessToken,"Yeni token oluştu" ); //Messages.AccessTokenCreated
+            var accessToken = _tokenHelper.CreateToken(user, claims.Data);
+            return new SuccessDataResult<AccessToken>(accessToken, "Yeni token oluştu"); //Messages.AccessTokenCreated
         }
     }
 }

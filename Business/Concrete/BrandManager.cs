@@ -27,7 +27,7 @@ namespace Business.Concrete
 
 
         [SecuredOperation("brand.add,admin")]
-        [ValidationAspect(typeof(CarValidator))]
+        [ValidationAspect(typeof(BrandValidator))]
         [CacheRemoveAspect("IBrandService.Get")]
         public IResult Add(Brand brand)
         {
