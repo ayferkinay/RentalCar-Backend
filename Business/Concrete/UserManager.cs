@@ -55,21 +55,19 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<User>>(_userDal.GetAll(), Messages.UserListed);
         }
-
         [PerformanceAspect(5)]
         [CacheAspect]
-        public IDataResult<List<User>> GetById(int id)
+        public IDataResult<User> GetById(int id)
         {
-            return new SuccessDataResult<List<User>>(_userDal.GetAll(u => u.Id == id));
+            return new SuccessDataResult<User>(_userDal.GetById(x => x.Id == id));
         }
 
         [PerformanceAspect(5)]
         [CacheAspect]
-        public User GetByMail(string email)
+        public IDataResult<User> GetByMail(string email)
         {
-            return _userDal.GetById(u => u.Email == email);
+            return new SuccessDataResult<User>(_userDal.GetById(x => x.Email == email));
         }
-
 
         [PerformanceAspect(5)]
         [CacheAspect]

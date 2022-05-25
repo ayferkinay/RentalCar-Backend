@@ -14,13 +14,13 @@ namespace WebAPI.Controllers
     public class CarsController : ControllerBase
     {
         ICarService _carService;
-public CarsController(ICarService carService)
+        public CarsController(ICarService carService)
         {
             _carService = carService;
         }
 
         [HttpGet("GetAll")]
-        public IActionResult GetAll(Car car)
+        public IActionResult GetAll()
         {
             var result = _carService.GetAll();
             if (result.Success)
@@ -40,8 +40,23 @@ public CarsController(ICarService carService)
             }
             return BadRequest(result);
         }
-        
-        
+
+
+
+        [HttpGet("GetById")]
+        public IActionResult GetById(int id)
+        {
+            var result = _carService.GetById(id);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+
+
+
         [HttpGet("GetByBrandId")]
         public IActionResult GetByBrandId(int id)
         {

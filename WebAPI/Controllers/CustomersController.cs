@@ -21,7 +21,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("GetAll")]
-        public IActionResult GetAll(Customer customer)
+        public IActionResult GetAll()
         {
             var result = _customerService.GetAll();
             if (result.Success)

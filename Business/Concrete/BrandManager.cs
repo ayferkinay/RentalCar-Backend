@@ -53,7 +53,7 @@ namespace Business.Concrete
         [PerformanceAspect(5)]
         public IDataResult<List<Brand>> GetAll()
         {
-            return new SuccessDataResult<List<Brand>>(Messages.BrandListed);
+            return new SuccessDataResult<List<Brand>>(_brandDal.GetAll(), Messages.BrandListed);
         }
 
 
@@ -62,7 +62,7 @@ namespace Business.Concrete
         [PerformanceAspect(5)]
         public IDataResult<Brand> GetById(int brandId)
         {
-            return new SuccessDataResult<Brand>(Messages.BrandIsInvalid);
+            return new SuccessDataResult<Brand>(_brandDal.GetById(x => x.BrandId == brandId), ("işlem başarılı"));
         }
 
 

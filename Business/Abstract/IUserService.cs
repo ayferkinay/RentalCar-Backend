@@ -13,11 +13,11 @@ namespace Business.Abstract
     public interface IUserService
     {
         IDataResult<List<User>> GetAll();
-        IDataResult<List<User>> GetById(int id);
+        IDataResult<User> GetById(int id);
         IResult Add(User user);
         IResult Update(User user);
         IResult Delete(User user);
-        User GetByMail(string email);
+        IDataResult<User> GetByMail(string email);
         List<OperationClaim> GetClaims(User user);
     }
 }

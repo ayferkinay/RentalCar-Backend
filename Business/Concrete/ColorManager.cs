@@ -50,15 +50,15 @@ namespace Business.Concrete
         public IDataResult<List<Colorr>> GetAll()
         {
             _colorDal.GetAll();
-            return new SuccessDataResult<List<Colorr>>(Messages.ColorListed);
+            return new SuccessDataResult<List<Colorr>>(_colorDal.GetAll(),Messages.ColorListed);
         }
 
         [CacheAspect]
         [PerformanceAspect(5)]
         public IDataResult<Colorr> GetById(int ColorId)
         {
-            _colorDal.GetById(c=> c.ColorId == ColorId);
-            return new SuccessDataResult<Colorr>(Messages.ColorIsInvalid);
+           
+            return new SuccessDataResult<Colorr>(_colorDal.GetById(c => c.ColorId == ColorId), Messages.ColorListed);
         }
 
 

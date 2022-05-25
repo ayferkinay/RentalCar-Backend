@@ -33,8 +33,6 @@ namespace Business.Concrete
 
         [CacheAspect]
         [PerformanceAspect(5)]
-        [SecuredOperation("car.add,admin")]
-        [ValidationAspect(typeof(CarValidator))]
         public IDataResult<List<Car>> GetByBrandId(int brandId)
         {
             return new SuccessDataResult<List<Car>>(_cardDal.GetAll(c=>c.BrandId==brandId));
@@ -110,20 +108,7 @@ namespace Business.Concrete
         }
 
 
-        [TransactionScopeAspect]
-        public IResult AddTransactionalTest(Car car)
-        {
-
-            Add(car);
-            if (car.DailyPrice <0)
-            {
-                throw new Exception("");
-            }
-
-            Add(car);
-
-            return null;
-        }
+       
         [CacheAspect]
         [PerformanceAspect(5)]
         public IDataResult<Car> GetById(int id)

@@ -48,8 +48,8 @@ namespace Business.Concrete
         [PerformanceAspect(5)]
         public IDataResult<List<Customer>> GetAll()
         {
-            _customerDal.GetAll();  
-            return new SuccessDataResult<List<Customer>>(Messages.CustomerListed);
+            
+            return new SuccessDataResult<List<Customer>>(_customerDal.GetAll(),Messages.CustomerListed);
         }
 
 
@@ -58,8 +58,8 @@ namespace Business.Concrete
         [PerformanceAspect(5)]
         public IDataResult<Customer> GetById(int customerId)
         {
-            _customerDal.GetById(c => c.Id == customerId);
-            return new SuccessDataResult<Customer>(Messages.CustomerIsInvalid);
+            
+            return new SuccessDataResult<Customer>(_customerDal.GetById(c => c.Id == customerId),Messages.CustomerIsInvalid);
         }
 
 

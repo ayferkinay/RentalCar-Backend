@@ -44,12 +44,12 @@ namespace Business.Concrete
                 return new ErrorDataResult<User>("kullanıcı bulunamadı"); // Messages.UserNotFound
             }
 
-            if (!HashingHelper.VerifyPasswordHash(userForLoginDto.Password, userToCheck.PasswordHash, userToCheck.PasswordSalt))
+            if (!HashingHelper.VerifyPasswordHash(userForLoginDto.Password, userToCheck.Data.PasswordHash, userToCheck.Data.PasswordSalt))
             {
                 return new ErrorDataResult<User>("şifre  hatası"); //  Messages.PasswordError
             }
 
-            return new SuccessDataResult<User>(userToCheck, "başarılı giriş"); //Messages.SuccessfulLogin
+            return new SuccessDataResult<User>(userToCheck.Data, "başarılı giriş"); //Messages.SuccessfulLogin
         }
 
         public IResult UserExists(string email)

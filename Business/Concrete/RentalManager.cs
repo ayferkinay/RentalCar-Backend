@@ -51,16 +51,15 @@ namespace Business.Concrete
         [CacheAspect]
         public IDataResult<List<Rental>> GetAll()
         {
-            _rentalDal.GetAll();
-            return new SuccessDataResult<List<Rental>>(Messages.RentListed);
+            
+            return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll(),Messages.RentListed);
         }
 
         [PerformanceAspect(5)]
         [CacheAspect]
         public IDataResult<Rental> GetById(int rentalId)
         {
-            _rentalDal.GetById(r=> r.Id==rentalId);
-            return new SuccessDataResult<Rental>(Messages.RentIsInvalid);
+            return new SuccessDataResult<Rental>(_rentalDal.GetById(r => r.Id == rentalId),Messages.RentListed);
         }
 
         [ValidationAspect(typeof(RentalValidator))]

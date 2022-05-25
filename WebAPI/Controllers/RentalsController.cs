@@ -19,7 +19,7 @@ namespace WebAPI.Controllers
             _rentalService = rentalService;
         }
         [HttpGet("GetAll")]
-        public IActionResult GetAll(Rental rental)
+        public IActionResult GetAll()
         {
             var result = _rentalService.GetAll();
             if (result.Success)
