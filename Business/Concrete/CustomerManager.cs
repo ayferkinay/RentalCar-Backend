@@ -1,6 +1,8 @@
 ﻿using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Caching;
+using Core.Aspects.Autofac.Performance;
 using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -22,6 +24,9 @@ namespace Business.Concrete
             _customerDal = customerDal;
         }
 
+
+        [PerformanceAspect(5)]
+        [CacheRemoveAspect("ICustomerService.Get")]
         [ValidationAspect(typeof(CustomerValidator))]
         public IResult Add(Customer customer)
         {
@@ -29,24 +34,38 @@ namespace Business.Concrete
             return new SuccessResult(Messages.CustomerAdded);
         }
 
+
+        [ValidationAspect(typeof(CustomerValidator))]
+        [CacheRemoveAspect("ICustomerService.Get")]
+        [PerformanceAspect(5)]
         public IResult Delete(Customer customer)
         {
             _customerDal.Delete(customer);  
             return new SuccessResult(Messages.CustomerDeleted);
         }
 
+        [CacheAspect]
+        [PerformanceAspect(5)]
         public IDataResult<List<Customer>> GetAll()
         {
             _customerDal.GetAll();  
             return new SuccessDataResult<List<Customer>>(Messages.CustomerListed);
         }
 
+
+
+        [CacheAspect]
+        [PerformanceAspect(5)]
         public IDataResult<Customer> GetById(int customerId)
         {
-            _customerDal.Get(c => c.Id == customerId);
+            _customerDal.GetById(c => c.Id == customerId);
             return new SuccessDataResult<Customer>(Messages.CustomerIsInvalid);
         }
 
+
+
+        [CacheRemoveAspect("ICustomerService.Get")]
+        [ValidationAspect(typeof(CustomerValidator))]
         public IResult Update(Customer customer)
         {
             _customerDal.Update(customer);

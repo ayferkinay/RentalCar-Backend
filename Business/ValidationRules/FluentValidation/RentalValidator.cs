@@ -12,6 +12,10 @@ namespace Business.ValidationRules.FluentValidation
     {
         public RentalValidator()
         {
+            RuleFor(x => x.RentDate).NotEmpty().WithMessage("Rent date cannot be empty");
+            RuleFor(x => x.ReturnDate).NotEmpty().WithMessage("Return date cannot be empty");
+            RuleFor(x => x.CarId).NotEmpty().WithMessage("Car Id cannot be empty");
+            RuleFor(x => x.CustomerId).NotEmpty().WithMessage("Customer Id cannot be empty");
         }
     }
 }

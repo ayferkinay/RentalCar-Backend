@@ -12,7 +12,13 @@ namespace Business.ValidationRules.FluentValidation
     {
         public CarValidator()
         {
-            //rules
+           
+            RuleFor(x => x.DailyPrice).NotEmpty();
+            RuleFor(x => x.DailyPrice).GreaterThan(0);
+            RuleFor(x => x.ModelYear).NotEmpty();
+            RuleFor(x => x.Description).NotEmpty();
+            RuleFor(x => x.Description).MinimumLength(10).WithMessage("Description should to be the least 10 character"); ;
+            RuleFor(c => c.Description).MaximumLength(500);
         }
     }
 }

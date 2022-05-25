@@ -1,6 +1,8 @@
 ﻿using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Caching;
+using Core.Aspects.Autofac.Performance;
 using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -21,7 +23,11 @@ namespace Business.Concrete
         {
             _rentalDal = rentalDal;
         }
+
+
         [ValidationAspect(typeof(RentalValidator))]
+        [CacheRemoveAspect("IRentalService.Get")]
+        [PerformanceAspect(5)]
         public IResult Add(Rental rental)
         {
             //if (rental.ReturnDate== null)
@@ -32,25 +38,33 @@ namespace Business.Concrete
             _rentalDal.Add(rental);
             return new SuccessResult(Messages.RentAdded);
         }
-
+        [ValidationAspect(typeof(RentalValidator))]
+        [CacheRemoveAspect("IRentalService.Get")]
+        [PerformanceAspect(5)]
         public IResult Delete(Rental rental)
         {
             _rentalDal.Delete(rental);
             return new SuccessResult(Messages.RentDeleted);
         }
 
+        [PerformanceAspect(5)]
+        [CacheAspect]
         public IDataResult<List<Rental>> GetAll()
         {
             _rentalDal.GetAll();
             return new SuccessDataResult<List<Rental>>(Messages.RentListed);
         }
 
+        [PerformanceAspect(5)]
+        [CacheAspect]
         public IDataResult<Rental> GetById(int rentalId)
         {
-            _rentalDal.Get(r=> r.Id==rentalId);
+            _rentalDal.GetById(r=> r.Id==rentalId);
             return new SuccessDataResult<Rental>(Messages.RentIsInvalid);
         }
 
+        [ValidationAspect(typeof(RentalValidator))]
+        [CacheRemoveAspect("IRentalService.Get")]
         public IResult Update(Rental rental)
         {
             _rentalDal.Update(rental);

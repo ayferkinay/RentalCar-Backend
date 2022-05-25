@@ -1,6 +1,9 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspect.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Caching;
+using Core.Aspects.Autofac.Performance;
 using Core.Aspects.Autofac.Validation;
 using Core.Entities.Concrete;
 using Core.Utilities.Results;
@@ -25,6 +28,9 @@ namespace Business.Concrete
         }
 
         [ValidationAspect(typeof(UserValidator))]
+        [PerformanceAspect(5)]
+        //[SecuredOperation("user.add,admin")]
+        [CacheRemoveAspect("IUserService.Get")]
         public IResult Add(User user)
         {
 
@@ -32,32 +38,50 @@ namespace Business.Concrete
             return new SuccessResult(Messages.UserAdded);
         }
 
+
+        [ValidationAspect(typeof(UserValidator))]
+        [PerformanceAspect(5)]
+        ////[SecuredOperation("user.delete,admin")]
+        [CacheRemoveAspect("IUserService.Get")]
         public IResult Delete(User user)
         {
             _userDal.Delete(user);
             return new SuccessResult(Messages.UserDeleted);
         }
 
+        [PerformanceAspect(5)]
+        [CacheAspect]
         public IDataResult<List<User>> GetAll()
         {
             return new SuccessDataResult<List<User>>(_userDal.GetAll(), Messages.UserListed);
         }
 
+        [PerformanceAspect(5)]
+        [CacheAspect]
         public IDataResult<List<User>> GetById(int id)
         {
             return new SuccessDataResult<List<User>>(_userDal.GetAll(u => u.Id == id));
         }
 
+        [PerformanceAspect(5)]
+        [CacheAspect]
         public User GetByMail(string email)
         {
-            return _userDal.Get(u => u.Email == email);
+            return _userDal.GetById(u => u.Email == email);
         }
 
+
+        [PerformanceAspect(5)]
+        [CacheAspect]
         public List<OperationClaim> GetClaims(User user)
         {
             return _userDal.GetClaims(user);
         }
 
+
+        [ValidationAspect(typeof(UserValidator))]
+        //[SecuredOperation("user.update,admin")]
+        [CacheRemoveAspect("IUserService.Get")]
         public IResult Update(User user)
         {
             _userDal.Update(user);

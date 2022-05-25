@@ -12,7 +12,6 @@ using DataAccess.Concrete;
 using DataAccess.Concrete.EntitiyFramework;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Build.Logging;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Infrastructure.Interception;
@@ -45,17 +44,13 @@ namespace Business.DependencyResolves.Autofac
             builder.RegisterType<EfRentalDall>().As<IRentalDal>().SingleInstance();
 
 
-            builder.RegisterType<FileLogger>().As<ILogger>().SingleInstance();//fileloger Ioc
-            builder.RegisterType<DatabaseLogger>().As<ILogger>().SingleInstance();
+         
 
             builder.RegisterType<CarImageManager>().As<ICarImageService>().SingleInstance();//CarImage Ioc
             builder.RegisterType<EfCarImageDal>().As<ICarImageDal>().SingleInstance();
 
             builder.RegisterType<FileHelperManager>().As<IFileHelper>().SingleInstance();
 
-
-            builder.RegisterType<UserManager>().As<IUserService>();
-            builder.RegisterType<EfUserDal>().As<IUserDal>();
 
             builder.RegisterType<AuthManager>().As<IAuthService>();
             builder.RegisterType<JwtHelper>().As<ITokenHelper>();

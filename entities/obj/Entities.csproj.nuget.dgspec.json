@@ -73,6 +73,10 @@
               "target": "Package",
               "version": "[17.2.0, )"
             },
+            "Microsoft.Build.Framework": {
+              "target": "Package",
+              "version": "[15.1.1012, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -157,6 +161,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Build.Framework": {
+              "target": "Package",
+              "version": "[15.1.1012, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
