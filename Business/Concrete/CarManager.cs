@@ -71,7 +71,7 @@ namespace Business.Concrete
 
         [PerformanceAspect(5)]
         [CacheRemoveAspect("IProductService.Get")]
-        //[SecuredOperation("car.add,admin")]
+        [SecuredOperation("car.add")]
         [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
@@ -86,7 +86,7 @@ namespace Business.Concrete
             return new SuccessResult(Messages.CarAdded);
         }
 
-        [SecuredOperation("car.add,admin")]
+        [SecuredOperation("car.add")]
         [ValidationAspect(typeof(CarValidator))]
         [CacheRemoveAspect("ICarService.Get")] // ICarService de bütün getleri sil
         public IResult Update(Car car)
@@ -99,7 +99,7 @@ namespace Business.Concrete
 
         [PerformanceAspect(5)]
         [CacheRemoveAspect("ICarService.Get")]
-        [SecuredOperation("car.delete,admin")]
+        [SecuredOperation("car.delete")]
         [ValidationAspect(typeof(CarValidator))]
         public IResult Delete(Car car)
         {

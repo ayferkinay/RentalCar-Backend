@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspect.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Caching;
@@ -27,6 +28,7 @@ namespace Business.Concrete
 
         [PerformanceAspect(5)]
         [CacheRemoveAspect("ICustomerService.Get")]
+        [SecuredOperation("customer.add")]
         [ValidationAspect(typeof(CustomerValidator))]
         public IResult Add(Customer customer)
         {
@@ -37,6 +39,7 @@ namespace Business.Concrete
 
         [ValidationAspect(typeof(CustomerValidator))]
         [CacheRemoveAspect("ICustomerService.Get")]
+        [SecuredOperation("customer.delete")]
         [PerformanceAspect(5)]
         public IResult Delete(Customer customer)
         {
@@ -66,6 +69,7 @@ namespace Business.Concrete
 
         [CacheRemoveAspect("ICustomerService.Get")]
         [ValidationAspect(typeof(CustomerValidator))]
+        [SecuredOperation("customer.update")]
         public IResult Update(Customer customer)
         {
             _customerDal.Update(customer);

@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspect.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Caching;
@@ -27,6 +28,7 @@ namespace Business.Concrete
 
         [ValidationAspect(typeof(RentalValidator))]
         [CacheRemoveAspect("IRentalService.Get")]
+        [SecuredOperation("rental.add")]
         [PerformanceAspect(5)]
         public IResult Add(Rental rental)
         {
@@ -40,6 +42,7 @@ namespace Business.Concrete
         }
         [ValidationAspect(typeof(RentalValidator))]
         [CacheRemoveAspect("IRentalService.Get")]
+        [SecuredOperation("rental.delete")]
         [PerformanceAspect(5)]
         public IResult Delete(Rental rental)
         {
@@ -64,6 +67,7 @@ namespace Business.Concrete
 
         [ValidationAspect(typeof(RentalValidator))]
         [CacheRemoveAspect("IRentalService.Get")]
+        [SecuredOperation("rental.delete")]
         public IResult Update(Rental rental)
         {
             _rentalDal.Update(rental);

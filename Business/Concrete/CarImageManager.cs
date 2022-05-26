@@ -32,7 +32,7 @@ namespace Business.Concrete
 
         [ValidationAspect(typeof(CarImageValidator))]
         [CacheRemoveAspect("ICarImageService.Get")]
-        [SecuredOperation("carImage.add,admin")]
+        [SecuredOperation("carImage.add")]
         [PerformanceAspect(5)]
         public IResult Add(IFormFile file, int carId)
         {
@@ -54,7 +54,7 @@ namespace Business.Concrete
 
 
         [CacheRemoveAspect("ICarImageService.Get")]
-        [SecuredOperation("carImage.delete,admin")]
+        [SecuredOperation("carImage.delete")]
         [ValidationAspect(typeof(CarImageValidator))]
         [PerformanceAspect(5)]
         public IResult Delete(CarImage carImage)
@@ -115,7 +115,7 @@ namespace Business.Concrete
 
 
         [CacheRemoveAspect("ICarImageService.Get")]
-        [SecuredOperation("carImage.update,admin")]
+        [SecuredOperation("carImage.update")]
         [ValidationAspect(typeof(CarImageValidator))]
         public IResult Update(IFormFile file, CarImage carImage)
         {
