@@ -45,7 +45,7 @@ namespace WebAPI
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPI", Version = "v1" });
             });
 
-
+            services.AddCors(); //cors injectoru yaptýk
 
         
             var tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();  //apiye jwt kullanacýðýmýzý bildirdil
@@ -80,6 +80,9 @@ namespace WebAPI
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPI v1"));
             }
+
+
+            app.UseCors(builder=>builder.WithOrigins("http://localhost:4200").AllowAnyHeader()); // bu baðlantýdan istek gelirse (get,post vs) istek için eriþim izni verilir
 
             app.UseHttpsRedirection();
 

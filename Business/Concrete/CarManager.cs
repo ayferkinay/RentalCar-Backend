@@ -53,10 +53,10 @@ namespace Business.Concrete
         //[CacheAspect] //key,value
         public IDataResult<List<Car>> GetAll()
         {
-            if (DateTime.Now.Hour==11)
-            {
-                return new ErrorDataResult<List<Car>>(Messages.MaintananceTime);
-            }
+            //if (DateTime.Now.Hour==11)
+            //{
+            //    return new ErrorDataResult<List<Car>>(Messages.MaintananceTime);
+            //}
 
             //iş kodları
             return new SuccessDataResult<List<Car>>(_cardDal.GetAll(),Messages.CarListed);
