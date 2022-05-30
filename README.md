@@ -4,8 +4,7 @@
 - **Validation için FluentValidation desteği, IoC için ise Autofac desteği eklenmiştir.**
 
 
-## Kullanılan Teknolojiler & Yapılar
-
+## Kullanılan Yapılar
 <ul>
     <li>Back-End
     <ul>
@@ -87,21 +86,4 @@
   
   
   
-  
-### Backend Tecnologies
 
-- Asp.Net Core for Restful api
-- MsSql
-- EntityFramework Core
-- Autofac
-- FluentValidation
-
-### Backend Techniques
-- Layered Architecture Design Pattern
-- AOP
-- JWT
-- Autofac dependency resolver
-- IOC
-- Aspects
-- File upload
-- **WebAPI**: Prjenin Restful API Katmanıdır. Kullanılan methodlar: Get, Post, Put, Delete
