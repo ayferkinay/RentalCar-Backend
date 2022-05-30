@@ -37,15 +37,6 @@
 </ul>
 
 
-
-
-## SQL Tables
-![rcp](https://user-images.githubusercontent.com/51466724/108183763-7b341a80-711b-11eb-9f84-110b0998e560.jpg)
-
-
-
-
-
 #### Prerequest 
 
  - [ ] EntityFrameworkCore.SqlServer 3.1.11
@@ -87,5 +78,9 @@
 
 
   
-  
+  ## SQL Tables
+![rcp](https://user-images.githubusercontent.com/51466724/108183763-7b341a80-711b-11eb-9f84-110b0998e560.jpg)
+
+
+
 
