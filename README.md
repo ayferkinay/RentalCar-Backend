@@ -19,15 +19,7 @@
         <li>Asenkron Yapı</li>
     </ul>
     </li>
-    <li>Front-End
-    <ul>
-        <li>Angular 11</li>
-        <li>Bootstrap 5.0</li>
-        <li>HttpClient Interceptor</li>
-        <li>Temel Guard</li>
-        <li>Özel Pipeler</li>
-    </ul>
-    </li>
+
 </ul>
 
 
