@@ -4,6 +4,17 @@
 - **Validation için FluentValidation desteği, IoC için ise Autofac desteği eklenmiştir.**
 
 
+### Katmanlar
+
+- **Core**: Projenin çekirdek katmanı, evrensel operasyonlar için kullanılmaktadır.
+- **DataAccess**: Projenin, Veritabanı ile bağını kuran katmandır.
+- **Entities**: Veritabanındaki tablolarımızın projemizde nesne olarak kullanılması için oluşturulmuştur. DTO nesnelerinide
+  barındırmaktadır.
+- **Business**: Projemizin iş katmanıdır. Türlü iş kuralları; Veri kontrolleri, validasyonlar, IoC Container'lar ve yetki
+  kontrolleri
+  
+
+
 ## Kullanılan Yapılar
 <ul>
     <li>Back-End
@@ -75,15 +86,6 @@
 
 
 
-### Katmanlar
-
-- **Core**: Projenin çekirdek katmanı, evrensel operasyonlar için kullanılmaktadır.
-- **DataAccess**: Projenin, Veritabanı ile bağını kuran katmandır.
-- **Entities**: Veritabanındaki tablolarımızın projemizde nesne olarak kullanılması için oluşturulmuştur. DTO nesnelerinide
-  barındırmaktadır.
-- **Business**: Projemizin iş katmanıdır. Türlü iş kuralları; Veri kontrolleri, validasyonlar, IoC Container'lar ve yetki
-  kontrolleri
-  
   
   
 
