@@ -1,4 +1,9 @@
 # RentalCar-Backend
+## ⭐ Introduction 
+- **Entities, DataAccess, Business, Core ve WebAPI katmanlarından oluşan araba kiralama projesidir. Bu projede Katmanlı mimari yapısı ve SOLID prensiplerine dikkate alınarak yazılmıştır. JWT entegrasyonu; Transaction, Cache, Validation ve Performance aspect'lerinin implementasyonu gerçekleştirilmiştir.** 
+- **Validation için FluentValidation desteği, IoC için ise Autofac desteği eklenmiştir.**
+- **[Sql query](https://github.com/gulceselim/re-cap-project-with-csharp/blob/main/RentACarSQLQuery.sql) dosyamı da ekledim isteyen varsa faydalanabilir.**
+
 
 ## Kullanılan Teknolojiler & Yapılar
 
@@ -29,17 +34,8 @@
 ![rcp](https://user-images.githubusercontent.com/51466724/108183763-7b341a80-711b-11eb-9f84-110b0998e560.jpg)
 
 
-## ⭐ Introduction 
-- **Entities, DataAccess, Business, Core ve WebAPI katmanlarından oluşan araba kiralama projesidir. Bu projede Katmanlı mimari yapısı ve SOLID prensiplerine dikkate alınarak yazılmıştır. JWT entegrasyonu; Transaction, Cache, Validation ve Performance aspect'lerinin implementasyonu gerçekleştirilmiştir.** 
-- **Validation için FluentValidation desteği, IoC için ise Autofac desteği eklenmiştir.**
-- **[Sql query](https://github.com/gulceselim/re-cap-project-with-csharp/blob/main/RentACarSQLQuery.sql) dosyamı da ekledim isteyen varsa faydalanabilir.**
 
 
-## Recent Changes
-✔ Caching, Transaction ve Performance aspectleri eklendi. <br>
-✔ CarManager class'ına ait olan GetAll metoduna Logging aspect'i eklendi. <br>
-✔ Car nesnesinin GetAll metodu performance ile test edildi. <br>
-✔ Çalıştırılan metodlar log4net.config ile log.json dosyasına yazıldı. <br> 
 
 #### Prerequest 
 
